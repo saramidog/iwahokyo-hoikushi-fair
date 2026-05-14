@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# エディタ
+.vscode/
+.idea/
+
+# Claude Code
+.claude/
+.company/
+.assets/
+
+# その他
+*.log
