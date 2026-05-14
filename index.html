@@ -707,20 +707,73 @@
     .footer-copy { font-size: 12px; text-align: center; }
 
     /* ─── RESPONSIVE ─────────────────────────────────────────── */
+
+    /* タブレット（〜800px） */
     @media (max-width: 800px) {
-      .steps-row {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
+      .steps-row { grid-template-columns: 1fr; gap: 32px; }
       .step-arrow { display: none; }
-      .footer-top { flex-direction: column; }
+      .footer-top { flex-direction: column; gap: 24px; }
+      .overview-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .map-wrap { aspect-ratio: 4/3; }
     }
+
+    /* モバイル（〜560px） */
     @media (max-width: 560px) {
+      .container { padding: 0 16px; }
+      .section { padding: 56px 0; }
+
+      /* ナビ */
+      .nav-inner { padding: 12px 16px; }
       .nav-logo small { display: none; }
-      .hero { padding: 80px 20px 60px; }
-      .section { padding: 64px 0; }
-      .btn-hero { padding: 16px 36px; font-size: 16px; }
-      .btn-cta  { padding: 18px 44px; font-size: 18px; }
+      .nav-logo { font-size: 14px; }
+      .btn { padding: 10px 18px; font-size: 13px; }
+
+      /* ヒーロー */
+      .hero { padding: 88px 16px 56px; background-position: center center; }
+      .hero-tag { font-size: 12px; padding: 7px 16px; margin-bottom: 24px; }
+      .hero-h1 { margin-bottom: 16px; }
+      .hero-sub { font-size: 14px; }
+      .hero-event-name { font-size: 16px; margin-bottom: 32px; }
+      .hero-pills { gap: 8px; margin-bottom: 36px; }
+      .pill { font-size: 12px; padding: 8px 14px; }
+      .btn-hero { padding: 16px 36px; font-size: 16px; width: 100%; max-width: 320px; }
+      .hero-note { font-size: 12px; }
+
+      /* カード系：1列 */
+      .overview-grid { grid-template-columns: 1fr; gap: 12px; }
+      .features-grid { grid-template-columns: 1fr; gap: 14px; }
+      .overview-card { padding: 20px 18px; }
+      .feat-card { padding: 20px 18px; }
+
+      /* ステップ */
+      .step-card { padding: 24px 20px; }
+
+      /* FAQ */
+      .faq-btn { padding: 18px 0; font-size: 15px; }
+      .faq-a-text { font-size: 14px; }
+
+      /* アクセスマップ */
+      .map-wrap { aspect-ratio: 1/1; border-radius: 12px; }
+      .map-info { flex-direction: column; align-items: center; gap: 10px; }
+      .map-info-item { width: 100%; max-width: 280px; justify-content: center; }
+
+      /* CTA */
+      .cta-block { padding: 72px 20px; }
+      .btn-cta { padding: 18px 40px; font-size: 17px; width: 100%; max-width: 320px; }
+
+      /* セクション見出し */
+      .section-badge { font-size: 11px; }
+
+      /* フッター */
+      .footer { padding: 48px 16px 28px; }
+      .footer-brand { font-size: 17px; }
+    }
+
+    /* 小型スマホ（〜380px） */
+    @media (max-width: 380px) {
+      .hero-event-name { font-size: 14px; }
+      .pill { font-size: 11px; padding: 7px 12px; }
     }
     /* ─── ICONS ──────────────────────────────────────────────── */
     .ov-icon { font-size: initial; }
